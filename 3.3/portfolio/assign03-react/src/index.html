@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assignment 03 – Word Guess (React)</title>
+  <!-- Reuse your main portfolio stylesheet -->
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- React & ReactDOM from CDN -->
+  <script
+    crossorigin
+    src="https://unpkg.com/react@18/umd/react.development.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  ></script>
+  <!-- Babel so we can write JSX in the browser -->
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <style>
+    /* Quick styling for the letter spans */
+    span {
+      display: inline-block;
+      width: 1.5em;
+      text-align: center;
+      margin-right: 2px;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    .correct     { background: green;  color: white; }
+    .wrong-place { background: gold; }
+    .not-part    { background: lightgray; }
+    body { padding: 20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Word Guess (React)</h1>
+  </header>
+
+  <div id="root"></div>
+
+  <!-- Your React code; Babel will transform on the fly -->
+  <script type="text/babel">
+    const { useState } = React;
+
+    function GuessedWord({ word, target, guessIndex }) {
+      return word.split("").map((ch, idx) => {
+        let cls;
+        if (ch === target[idx])         cls = "correct";
+        else if (target.includes(ch))    cls = "wrong-place";
+        else                             cls = "not-part";
+
+        return (
+          <span key={`${guessIndex}-${idx}`} className={cls}>
+            {ch}
+          </span>
+        );
+      });
+    }
+
+    function WordGame({ word }) {
+      const [history, setHistory] = useState([]);
+      const [current, setCurrent] = useState("");
+      const [turn,    setTurn]    = useState(1);
+      const [won,     setWon]     = useState(false);
+
+      const onChange = e => setCurrent(e.target.value.toUpperCase());
+      const onKey    = e => {
+        if (e.key === "Enter" && current.length === 5) {
+          setHistory([...history, current]);
+          if (current === word) setWon(true);
+          else setTurn(turn + 1);
+          setCurrent("");
+        }
+      };
