@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/CSC322-Summer2025/4.2/react-hooks-crud/static/css/main.9883bccc.css",
+    "main.js": "/CSC322-Summer2025/4.2/react-hooks-crud/static/js/main.9566cd7a.js",
+    "index.html": "/CSC322-Summer2025/4.2/react-hooks-crud/index.html",
+    "main.9883bccc.css.map": "/CSC322-Summer2025/4.2/react-hooks-crud/static/css/main.9883bccc.css.map",
+    "main.9566cd7a.js.map": "/CSC322-Summer2025/4.2/react-hooks-crud/static/js/main.9566cd7a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9883bccc.css",
+    "static/js/main.9566cd7a.js"
+  ]
+}

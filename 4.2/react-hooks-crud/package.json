@@ -1,7 +1,7 @@
 {
   "name": "react-hooks-crud",
   "version": "0.1.0",
-  "homepage": "https://dcdunbar.github.io/CSC322-Summer2025/4.2/react-hooks-crud",
+  "homepage": "/CSC322-Summer2025/4.2/react-hooks-crud",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
