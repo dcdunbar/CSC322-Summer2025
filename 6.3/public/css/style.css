@@ -1,0 +1,11 @@
+abel { display: block; margin: 5px 0; }
+table { border-collapse: collapse; }
+th, td { border: 1px solid #ddd; padding: 6px 10px; }
+thead th { text-align: left; background: #f3f3f3; }
+.success { padding: 10px; background: #e7f7ec; border: 1px solid #bfe2c7; margin: 10px 0; }
+nav ul { list-style: none; padding-left: 0; display: flex; gap: 12px; }
+nav a { text-decoration: none; }
+form .row { margin-bottom: 8px; }
+input[type=text], input[type=number], input[type=email] { padding: 6px; width: 320px; max-width: 100%; }
+button, input[type=submit] { padding: 6px 12px; cursor: pointer; }
+a.button-link { display: inline-block; padding: 4px 8px; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; }
