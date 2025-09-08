@@ -1,0 +1,8 @@
+﻿node_modules/
+.env
+.env.local
+.env.*.local
+server/data/*.db
+server/data/*.db-journal
+client/dist/
+client/.vite/
